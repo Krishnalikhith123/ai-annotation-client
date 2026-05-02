@@ -11,7 +11,9 @@ const TaskQueue = () => {
   const { tasks, loading } = useSelector((state) => state.tasks);
   const [filter, setFilter] = useState('all');
 
-  useEffect(() => { dispatch(fetchTasks()); }, []);
+  useEffect(() => {
+    dispatch(fetchTasks());
+  }, [dispatch]);
 
   const filtered = filter === 'all' ? tasks : tasks.filter((t) => t.status === filter);
 

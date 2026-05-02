@@ -14,7 +14,7 @@ const Login = () => {
   useEffect(() => {
     if (user) navigate(getDashboardPath(user.role));
     if (error) { toast.error(error); dispatch(clearError()); }
-  }, [user, error]);
+}, [user, error, dispatch, navigate]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

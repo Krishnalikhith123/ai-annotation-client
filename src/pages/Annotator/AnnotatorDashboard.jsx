@@ -22,7 +22,7 @@ const AnnotatorDashboard = () => {
       setPerformance(perfRes.data.performance);
       setLoading(false);
     });
-  }, []);
+  }, [user.id]);
 
   if (loading) return <DashboardLayout><Loader /></DashboardLayout>;
 
