@@ -25,7 +25,7 @@ const AnnotationWorkspace = () => {
       setLoading(false);
     });
     dispatch(updateTaskStatus({ id, status: 'in_progress' }));
-  }, [id]);
+  }, [id, dispatch]);
 
   const handleSave = async (submitFinal = false) => {
     setSaving(true);

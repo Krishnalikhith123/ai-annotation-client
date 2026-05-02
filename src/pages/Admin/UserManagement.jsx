@@ -11,7 +11,9 @@ const UserManagement = () => {
   const dispatch = useDispatch();
   const { users, loading } = useSelector((state) => state.users);
 
-  useEffect(() => { dispatch(fetchUsers()); }, []);
+  useEffect(() => {
+    dispatch(fetchUsers());
+  }, [dispatch]);
 
   const toggleActive = async (id, isActive) => {
     await axiosInstance.put(`/users/${id}`, { isActive: !isActive });

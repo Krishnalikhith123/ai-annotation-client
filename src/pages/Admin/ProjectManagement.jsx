@@ -34,7 +34,7 @@ const ProjectManagement = () => {
     dispatch(fetchProjects());
     axiosInstance.get('/users?role=annotator').then((r) => setAnnotators(r.data.users));
     axiosInstance.get('/datasets').then((r) => setDatasets(r.data.datasets));
-  }, []);
+  }, [dispatch]);
 
   // ── Create Project ──
   const handleCreateProject = async (e) => {

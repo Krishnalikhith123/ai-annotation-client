@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import DashboardLayout from '../../components/Layout/DashboardLayout';
 import Card from '../../components/UI/Card';
-import Loader from '../../components/UI/Loader';
 import axiosInstance from '../../utils/axiosConfig';
 import { toast } from 'react-toastify';
 
